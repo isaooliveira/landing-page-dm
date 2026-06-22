@@ -52,39 +52,17 @@ export function MentorSection() {
         }}>
 
           {/* Portrait image */}
-          <div
-            ref={imgRef}
-            style={{ position: 'relative' }}
-          >
-            {/* Decorative border frame */}
-            <div style={{
-              position: 'absolute',
-              top: 16, left: 16, right: -16, bottom: -16,
-              borderRadius: 'var(--dm-radius-xl)',
-              border: '1px solid rgba(192,146,66,0.20)',
-              zIndex: 0,
-            }} />
-
-            <div style={{
-              borderRadius: 'var(--dm-radius-xl)',
-              overflow: 'hidden',
-              aspectRatio: '3/4',
-              position: 'relative',
-              zIndex: 1,
-              boxShadow: '0 24px 64px rgba(8,4,2,0.20)',
-            }}>
-              <img
-                src="/assets/foto-quem-sou-final.webp"
-                alt="Talita Lopes — Mentora"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
-              {/* Subtle gradient at bottom */}
-              <div style={{
-                position: 'absolute', bottom: 0, left: 0, right: 0, height: '30%',
-                background: 'linear-gradient(to top, rgba(22,9,4,0.5) 0%, transparent 100%)',
-                pointerEvents: 'none',
-              }} />
-            </div>
+          <div ref={imgRef}>
+            <img
+              src={`${import.meta.env.BASE_URL}assets/foto-quem-sou-final.webp`}
+              alt="Talita Lopes — Mentora"
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                borderRadius: 'var(--dm-radius-xl)',
+              }}
+            />
           </div>
 
           {/* Text content */}

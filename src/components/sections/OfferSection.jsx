@@ -1,13 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { Button } from '../ui/Button';
-import { ArrowRight, CheckCircle2, ShieldCheck, Infinity, Headphones, BookOpen } from 'lucide-react';
-
-const includes = [
-  { icon: Infinity, text: 'Acesso vitalício ao conteúdo da Imersão' },
-  { icon: Headphones, text: 'Áudios terapêuticos de integração emocional' },
-  { icon: BookOpen, text: 'Materiais complementares de estudo guiado' },
-  { icon: ShieldCheck, text: 'Garantia incondicional de 7 dias' },
-];
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/E106442328I';
 
@@ -90,39 +83,6 @@ export function OfferSection() {
           }}>
             Sua liberdade emocional começa aqui
           </h2>
-
-          {/* What's included */}
-          <div style={{
-            width: '100%',
-            maxWidth: 440,
-            marginBottom: 'var(--dm-space-6)',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 'var(--dm-space-3)',
-          }}>
-            {includes.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div key={i} style={{
-                  display: 'flex', alignItems: 'center', gap: 14,
-                  padding: '12px 16px',
-                  borderRadius: 'var(--dm-radius-md)',
-                  background: 'rgba(192,146,66,0.06)',
-                  border: '1px solid rgba(192,146,66,0.12)',
-                  textAlign: 'left',
-                }}>
-                  <Icon size={18} strokeWidth={1.5} style={{ color: 'var(--dm-ouro-light)', flexShrink: 0 }} />
-                  <span style={{
-                    fontFamily: 'var(--dm-font-body)',
-                    fontSize: '0.9rem',
-                    color: 'rgba(245,237,224,0.85)',
-                  }}>
-                    {item.text}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
 
           {/* Divider */}
           <div style={{ width: '100%', height: '1px', background: 'rgba(192,146,66,0.15)', marginBottom: 'var(--dm-space-6)' }} />
