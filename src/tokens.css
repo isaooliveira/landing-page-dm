@@ -1,0 +1,62 @@
+:root {
+  /* ── Paleta de Cores Premium ─────────────────────────── */
+  --dm-noir:        #080402;
+  --dm-espresso:    #160904;
+  --dm-terra:       #2A1209;
+  --dm-cacau:       #3D1C0E;
+  --dm-caramelo:    #6B3E20;
+  --dm-ouro:        #C09242;
+  --dm-ouro-light:  #D9B870;
+  --dm-ouro-pale:   #EDD99A;
+  --dm-marfim:      #F5EDE0;
+  --dm-creme:       #FAF6EF;
+  --dm-creme-2:     #F2EAD8;
+  --dm-branco:      #FFFDF9;
+
+  /* ── Mapeamento Semântico ────────────────────────────── */
+  --dm-bg:           var(--dm-creme);
+  --dm-bg-alt:       var(--dm-creme-2);
+  --dm-bg-dark:      var(--dm-espresso);
+  --dm-bg-darker:    var(--dm-noir);
+  --dm-surface:      var(--dm-branco);
+  --dm-surface-warm: var(--dm-marfim);
+  --dm-text:         var(--dm-terra);
+  --dm-text-dark:    var(--dm-espresso);
+  --dm-text-inverse: var(--dm-marfim);
+  --dm-text-muted:   rgba(42, 18, 9, 0.55);
+  --dm-accent:       var(--dm-ouro);
+  --dm-accent-light: var(--dm-ouro-light);
+  --dm-border:       rgba(107, 62, 32, 0.12);
+  --dm-border-dark:  rgba(192, 146, 66, 0.20);
+
+  /* ── Tipografia ──────────────────────────────────────── */
+  --dm-font-heading: "Cormorant Garamond", Georgia, serif;
+  --dm-font-body:    "DM Sans", system-ui, sans-serif;
+
+  /* ── Raios ───────────────────────────────────────────── */
+  --dm-radius-sm:  8px;
+  --dm-radius-md:  14px;
+  --dm-radius-lg:  22px;
+  --dm-radius-xl:  32px;
+
+  /* ── Sombras ─────────────────────────────────────────── */
+  --dm-shadow-soft:  0 4px 24px rgba(22, 9, 4, 0.06);
+  --dm-shadow-card:  0 12px 48px rgba(22, 9, 4, 0.10);
+  --dm-shadow-deep:  0 24px 80px rgba(22, 9, 4, 0.18);
+  --dm-shadow-gold:  0 0 40px rgba(192, 146, 66, 0.20);
+
+  /* ── Espaçamentos ────────────────────────────────────── */
+  --dm-space-1:  8px;
+  --dm-space-2:  12px;
+  --dm-space-3:  16px;
+  --dm-space-4:  24px;
+  --dm-space-5:  36px;
+  --dm-space-6:  56px;
+  --dm-space-7:  80px;
+  --dm-space-8: 120px;
+
+  /* ── Transições ──────────────────────────────────────── */
+  --dm-ease:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dm-ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+  --dm-duration: 600ms;
+}

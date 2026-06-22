@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/dm", "destination": "/index.html" },
+    { "source": "/dm/", "destination": "/index.html" },
+    { "source": "/dm/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/dm/favicon.png", "destination": "/favicon.png" },
+    { "source": "/dm/:path*", "destination": "/index.html" }
+  ]
+}
