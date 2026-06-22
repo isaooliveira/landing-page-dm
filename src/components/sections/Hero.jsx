@@ -7,10 +7,10 @@ export function Hero() {
   const subRef = useRef(null);
   const btnRef = useRef(null);
   const imgRef = useRef(null);
-  const kickerRef = useRef(null);
+  const logoRef = useRef(null);
 
   useEffect(() => {
-    const els = [kickerRef, headingRef, subRef, btnRef, imgRef];
+    const els = [logoRef, headingRef, subRef, btnRef, imgRef];
     els.forEach((ref, i) => {
       if (!ref.current) return;
       ref.current.style.opacity = '0';
@@ -68,8 +68,17 @@ export function Hero() {
           {/* Left column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--dm-space-5)' }}>
 
-            <div ref={kickerRef} className="dm-kicker" style={{ color: 'var(--dm-ouro-light)' }}>
-              Imersão Digital
+            <div ref={logoRef}>
+              <img
+                src={`${import.meta.env.BASE_URL}assets/logo-dm.svg`}
+                alt="Divórcio Materno — Escola da Nova Linhagem"
+                style={{
+                  width: '100%',
+                  maxWidth: 220,
+                  height: 'auto',
+                  display: 'block',
+                }}
+              />
             </div>
 
             <h1
