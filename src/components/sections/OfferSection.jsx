@@ -9,6 +9,8 @@ const includes = [
   { icon: ShieldCheck, text: 'Garantia incondicional de 7 dias' },
 ];
 
+const HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/E106442328I';
+
 export function OfferSection() {
   const cardRef = useRef(null);
 
@@ -169,7 +171,12 @@ export function OfferSection() {
           </div>
 
           {/* CTA */}
-          <Button href="#checkout" style={{ width: '100%', maxWidth: 440, minHeight: 64, fontSize: '0.9rem' }}>
+          <Button
+            href={HOTMART_CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ width: '100%', maxWidth: 440, minHeight: 64, fontSize: '0.9rem' }}
+          >
             Quero iniciar o meu divórcio
             <ArrowRight size={16} />
           </Button>
