@@ -117,53 +117,32 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Trust bar */}
-            <div style={{
-              display: 'flex', gap: 'var(--dm-space-5)', paddingTop: 'var(--dm-space-3)',
-              borderTop: '1px solid rgba(192,146,66,0.18)',
-            }}>
-              {[['Garantia', '7 dias'], ['Acesso', 'Vitalício'], ['Formato', 'Digital']].map(([label, value]) => (
-                <div key={label} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                  <span style={{ fontFamily: 'var(--dm-font-body)', fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--dm-ouro)', opacity: 0.7 }}>{label}</span>
-                  <span style={{ fontFamily: 'var(--dm-font-heading)', fontSize: '1.1rem', color: 'var(--dm-marfim)', fontWeight: 500 }}>{value}</span>
-                </div>
-              ))}
-            </div>
-
           </div>
 
           {/* Right column: image */}
-          <div
-            ref={imgRef}
-            style={{
-              position: 'relative',
-              borderRadius: 'var(--dm-radius-xl)',
-              overflow: 'hidden',
-              aspectRatio: '4/5',
-              boxShadow: '0 32px 80px rgba(8,4,2,0.60), 0 0 0 1px rgba(192,146,66,0.15)',
-            }}
-          >
+          <div ref={imgRef}>
             <img
-              src="/assets/hero.png"
+              src={`${import.meta.env.BASE_URL}assets/hero.png`}
               alt="Divórcio Materno"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                borderRadius: 'var(--dm-radius-xl)',
+              }}
             />
-            {/* Subtle gold overlay at bottom */}
-            <div style={{
-              position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%',
-              background: 'linear-gradient(to top, rgba(22,9,4,0.75) 0%, transparent 100%)',
-              pointerEvents: 'none',
-            }} />
 
             {/* Floating badge */}
             <div style={{
-              position: 'absolute', bottom: 'var(--dm-space-4)', left: 'var(--dm-space-4)',
+              marginTop: 'var(--dm-space-4)',
               background: 'rgba(22,9,4,0.80)',
               backdropFilter: 'blur(12px)',
               border: '1px solid rgba(192,146,66,0.25)',
               borderRadius: 'var(--dm-radius-md)',
               padding: '10px 16px',
-              display: 'flex', flexDirection: 'column', gap: 2,
+              display: 'inline-flex',
+              flexDirection: 'column',
+              gap: 2,
             }}>
               <span style={{ fontFamily: 'var(--dm-font-body)', fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--dm-ouro)', opacity: 0.8 }}>Condição especial</span>
               <span style={{ fontFamily: 'var(--dm-font-heading)', fontSize: '1.3rem', color: 'var(--dm-marfim)', fontWeight: 500, lineHeight: 1 }}>12x de R$ 9,70</span>
